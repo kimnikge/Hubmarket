@@ -3,16 +3,12 @@
 import { useState } from "react"
 import { useRouter } from "next/navigation"
 import Image from "next/image"
+import { handleTelegramLogin } from "@/lib/auth"
 
 export default function LoginPage() {
   const [phoneNumber, setPhoneNumber] = useState("")
   const [isLoading, setIsLoading] = useState(false)
   const router = useRouter()
-
-  const handleTelegramLogin = async () => {
-    // Здесь будет логика для открытия Telegram бота
-    window.open("https://t.me/your_bot_username", "_blank")
-  }
 
   const handlePhoneSubmit = async (e: React.FormEvent) => {
     e.preventDefault()

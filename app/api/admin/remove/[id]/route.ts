@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server"
-import { checkAdminAccess } from "@/lib/auth"
+import checkAdminAccess from "@/lib/auth"
 
 export async function DELETE(req: Request, { params }: { params: { id: string } }) {
   try {
